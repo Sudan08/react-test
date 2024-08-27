@@ -1,6 +1,7 @@
 // Importing icon for loading state
 
 // Github Link : https://github.com/Sudan08/react-test
+// Hosted Website Link : https://react-test-three-lovat.vercel.app/
 import { Loader2 } from "lucide-react";
 // hooks for applicaiton
 import { useEffect, useState } from "react";
@@ -108,6 +109,13 @@ function App() {
           >
             Github Link : https://github.com/Sudan08/react-test
           </a>
+          <a
+            href="https://react-test-three-lovat.vercel.app/"
+            target="_blank"
+            className="text-center"
+          >
+            Website Link : https://react-test-three-lovat.vercel.app/
+          </a>
         </div>
         <div className="flex flex-col gap-3 w-full">
           <div className="flex flex-row justify-between items-center px-6">
@@ -139,11 +147,14 @@ function App() {
                 </button>
               </div>
             )}
-            {data?.map((item) => (
+            {data?.map((item, idx) => (
               <div
                 className="flex flex-row justify-between items-center px-6"
                 key={item.id}
               >
+                <h1 className="text-3xl font-semibold  text-center">
+                  {idx + 1}
+                </h1>
                 <h1 className="text-3xl font-semibold w-full text-center">
                   {item.name}
                 </h1>
